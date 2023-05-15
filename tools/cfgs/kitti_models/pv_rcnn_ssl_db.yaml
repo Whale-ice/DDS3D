@@ -158,7 +158,7 @@ MODEL:
             }
 
     ROI_HEAD:
-        NAME: PVRCNNHead
+        NAME: PVRCNNHead_db
         CLASS_AGNOSTIC: True
 
         SHARED_FC: [256, 256]
@@ -232,9 +232,9 @@ MODEL:
     UNLABELED_SUPERVISE_REFINE: True
     UNLABELED_WEIGHT: 1.0
     SEM_THRESH: [0.4, 0.4, 0.4]
-    SUPERVISE_MODE: 0
-    NO_NMS: False
     USE_SEM_THRESH: True
+    DECAY_STEP: 1000
+    MINTHR: 0.4
 
 
 OPTIMIZATION:
