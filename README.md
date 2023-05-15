@@ -7,3 +7,23 @@ This is the repository for DDS3D(ICRA2023).
 In this repository, we provide DDS3D implementation (with pytorch) based on PV-RCNN and 3DIoUMatch.
 
 #need to do
+## Installation
+
+Please refer to the origin [README.md](./README_OpenPCDet.md) for installation and usage of OpenPCDet.
+
+## Data Preparation and Training
+
+Please follow [3DIoUMatch-PVRCNN](https://github.com/THU17cyz/3DIoUMatch-PVRCNN)
+
+#### Pre-training
+For example
+
+'''bash
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash scripts/dist_pretrain.sh  4 --cfg_file cfgs/kitti_models/pvrcnn.yaml  --extra_tag split_0.20_1 --split train_0.20_1 --ckpt_save_interval 4 --repeat 10 --dbinfos kitti_dbinfos_train_0.20_1_742.pkl
+'''
+
+#### semi-training
+For example
+'''bash
+CUDA_VISIBLE_DEVICES=2,3 bash scripts/dist_train.sh 2 --cfg_file cfgs/kitti_models/voxel_rcnn_ssl.yaml --split train_0.01_3 --extra_tag split_0.01_3 --ckpt_save_interval 2 --pretrained_model ../output/kitti_models/pvrcnn/split_0.01_3/ckpt/checkpoint_epoch_80.pth  --repeat 5 --thresh '0.5,0.25,0.25' --sem_thresh '0.4,0.0,0.0' --dbinfos kitti_dbinfos_train_0.01_3_37.pkl
+'''
