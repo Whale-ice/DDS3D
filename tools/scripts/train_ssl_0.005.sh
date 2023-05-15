@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash scripts/dist_train.sh 4  --cfg_file cfgs/kitti_models/pv_rcnn_ssl.yaml  --split train_0.005_1 --extra_tag train_0.005_1  --pretrained_model /home/jingyu/competition/3DIoUMatch-PVRCNN/output/kitti_models/pv_rcnn/train_0.005_1/ckpt/checkpoint_epoch_75.pth  --repeat 10 --thresh '0.5,0.25,0.25'  --sem_thresh '0.4,0.4,0.4' --dbinfos kitti_dbinfos_train_0.005_1_18.pkl --epochs 60 
+sleep 100m
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash scripts/dist_train.sh 4  --cfg_file cfgs/kitti_models/pv_rcnn_ssl.yaml  --split train_0.005_2 --extra_tag train_0.005_2  --pretrained_model /home/jingyu/competition/3DIoUMatch-PVRCNN/output/kitti_models/pv_rcnn/train_0.005_2/ckpt/checkpoint_epoch_76.pth  --repeat 10 --thresh '0.5,0.25,0.25'  --sem_thresh '0.4,0.4,0.4' --dbinfos kitti_dbinfos_train_0.005_2_18.pkl --epochs 60 
+sleep 100m
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash scripts/dist_train.sh 4  --cfg_file cfgs/kitti_models/pv_rcnn_ssl.yaml  --split train_0.005_3 --extra_tag train_0.005_3  --pretrained_model /home/jingyu/competition/3DIoUMatch-PVRCNN/output/kitti_models/pv_rcnn/train_0.005_3/ckpt/checkpoint_epoch_65.pth  --repeat 10 --thresh '0.5,0.25,0.25'  --sem_thresh '0.4,0.4,0.4' --dbinfos kitti_dbinfos_train_0.005_3_18.pkl --epochs 60 
+sleep 100m
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash scripts/dist_train.sh 4  --cfg_file cfgs/kitti_models/pv_rcnn_ssl_db.yaml  --split train_0.005_1 --extra_tag train_0.005_1  --pretrained_model /home/jingyu/competition/3DIoUMatch-PVRCNN/output/kitti_models/pv_rcnn/train_0.005_1/ckpt/checkpoint_epoch_75.pth  --repeat 10 --thresh '0.0,0.0,0.0'  --sem_thresh '0.6,0.6,0.6' --dbinfos kitti_dbinfos_train_0.005_1_18.pkl --epochs 60 
+sleep 95m
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash scripts/dist_train.sh 4  --cfg_file cfgs/kitti_models/pv_rcnn_ssl_db.yaml  --split train_0.005_2 --extra_tag train_0.005_2  --pretrained_model /home/jingyu/competition/3DIoUMatch-PVRCNN/output/kitti_models/pv_rcnn/train_0.005_2/ckpt/checkpoint_epoch_76.pth  --repeat 10 --thresh '0.0,0.0,0.0'  --sem_thresh '0.6,0.6,0.6' --dbinfos kitti_dbinfos_train_0.005_2_18.pkl --epochs 60 
+sleep 95m
+CUDA_VISIBLE_DEVICES=0,1,2,3 bash scripts/dist_train.sh 4  --cfg_file cfgs/kitti_models/pv_rcnn_ssl_db.yaml  --split train_0.005_3 --extra_tag train_0.005_3  --pretrained_model /home/jingyu/competition/3DIoUMatch-PVRCNN/output/kitti_models/pv_rcnn/train_0.005_3/ckpt/checkpoint_epoch_65.pth  --repeat 10 --thresh '0.0,0.0,0.0'  --sem_thresh '0.6,0.6,0.6' --dbinfos kitti_dbinfos_train_0.005_3_18.pkl --epochs 60 
+sleep 95m
