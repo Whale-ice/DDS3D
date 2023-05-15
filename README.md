@@ -1,18 +1,10 @@
-# 3DIoUMatch-PVRCNN
+# DDS3D
+Dense Pseudo-Labels with Dynamic Threshold for Semi-Supervised 3D Object Detection(DDS3D).
 
-## Introduction
+You can find the paper at https://arxiv.org/abs/2303.05079.
 
-In this repository, we provide 3DIoUMatch implementation (with Pytorch) based on PV-RCNN. This is not a general implementation of SSL-training on KITTI but tailored to PVRCNN.
-
-The implementation based on VoteNet is [here](https://github.com/THU17cyz/3DIoUMatch). Our arXiv report is [here](https://arxiv.org/abs/2012.04355v3).
-
-## Notice
-
-In the current version of our paper, the experiments are using a problematic setting -- we used the complete `gt_database` for `gt_sampling` data augmentation, causing the baseline performance of 1% and 2% data to be too high (which means we used 100% bounding boxes and the points enclosed in them for data augmentation, for more information please refer to [database_sample.py](https://github.com/open-mmlab/OpenPCDet/blob/master/pcdet/datasets/augmentor/database_sampler.py)). Now we limit the `gt_database` to be also 1%, for example, if the training data is only 1%. We also used train-time RoI selection stradegy in pseudo-label generation before, which we now change to test-time RoI selection strategy to avoid involving ground truth knowledge. Corrected experiments show our method can still achieve large improvements. Part of the experiment results are shown below. The paper on arXiv has already been updated. Sincere apologies for this problem and thank [Andy Yuan](https://github.com/AndyYuan96) very much for helping with this issue.
-
-![image](https://user-images.githubusercontent.com/52420115/122535862-8873fe00-d056-11eb-9ad3-bd41d76f6af9.png) 
-
-The above results are achieved with IoU thresholds 0.5, 0.25, 0.25 for car, pedestrian, and cyclist, respectively. The classification threshold is 0.4. We repeat the traverse of labeled data for 5 times in each epoch and we train 60 epochs.
+This is the repository for DDS3D(ICRA2023).
+In this repository, we provide DDS3D implementation (with pytorch) based on PV-RCNN and 3DIoUMatch.
 
 
 ## Installation
