@@ -6,7 +6,7 @@ You can find the paper at https://arxiv.org/abs/2303.05079.
 This is the repository for DDS3D(ICRA2023).
 In this repository, we provide DDS3D implementation (with pytorch) based on [PV-RCNN](https://github.com/open-mmlab/OpenPCDet) and [3DIoUMatch](https://github.com/THU17cyz/3DIoUMatch-PVRCNN).
 
-#need to do
+i find some problems so this repo need to modify, i will fix them soon
 ## Installation
 
 Please refer to the origin [README.md](./README_OpenPCDet.md) for installation and usage of OpenPCDet.
