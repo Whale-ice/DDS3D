@@ -27,7 +27,7 @@ For example
 ```bash
 CUDA_VISIBLE_DEVICES=2,3 bash scripts/dist_train.sh 2 --cfg_file cfgs/kitti_models/pv_rcnn_ssl_db.yaml --split train_0.01_3 --extra_tag split_0.01_3 --ckpt_save_interval 2 --pretrained_model ../output/kitti_models/pvrcnn/split_0.01_3/ckpt/checkpoint_epoch_80.pth  --repeat 5 --thresh '0.5,0.25,0.25' --sem_thresh '0.4,0.0,0.0' --dbinfos kitti_dbinfos_train_0.01_3_37.pkl
 ```
-####Bibtes
+#### Bibtes
 If this work is helpful for your research, please consider citing the following BibTeX entry.
 ```bash
 @INPROCEEDINGS{10160489,
